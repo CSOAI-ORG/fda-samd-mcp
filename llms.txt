@@ -1,0 +1,36 @@
+# fda-samd-mcp
+# FDA AI/ML Software as a Medical Device Action Plan + 510(k) + PMA + De Novo pathways for US MedTech and digital health firms.
+
+## Install
+```bash
+pip install fda-samd-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label + on-premise.
+
+## Tools (5)
+
+### `classify_sw_device(query, api_key)`
+FDA SaMD vs SiMD classification + IMDRF risk framework
+
+### `regulatory_pathway(query, api_key)`
+510(k) / De Novo / PMA pathway selection
+
+### `pccp_template(query, api_key)`
+Predetermined Change Control Plan generator (locked vs adaptive AI)
+
+### `good_ml_practice(query, api_key)`
+FDA Good Machine Learning Practice (GMLP) 10 principles
+
+### `ai_ml_action_plan(query, api_key)`
+FDA AI/ML Action Plan focus area assessment
+
+## Pairs with
+- `meok-attestation-api` — HMAC signing for compliance certs
+- `meok-attestation-verify` — public verification
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT

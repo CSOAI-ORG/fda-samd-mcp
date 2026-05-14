@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fda-samd-mcp"
+version = "1.0.0"
+description = "FDA AI/ML Software as a Medical Device Action Plan + 510(k) + PMA + De Novo pathways for US MedTech and digital health firms."
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+authors = [{name = "MEOK AI Labs", email = "hello@meok.ai"}]
+keywords = ["fda", "samd", "510k", "pma", "de-novo", "pccp", "ai-ml-action-plan", "mcp", "mcp-server", "model-context-protocol", "ai-governance"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = ["mcp>=1.0.0"]
+
+[project.urls]
+Homepage = "https://meok.ai"
+Repository = "https://github.com/meok-ai-labs/fda-samd-mcp"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+only-include = ["server.py"]
+
+[project.scripts]
+fda-samd-mcp = "server:main"

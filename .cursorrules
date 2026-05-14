@@ -1,0 +1,13 @@
+# FDA AI/ML SaMD Compliance MCP - Auto-trigger Rules
+
+When the user asks about FDA, SaMD, 510(k), PMA, De Novo, PCCP, GMLP, AI/ML medical device, use fda-samd-mcp tools:
+
+- **classify_sw_device**: FDA SaMD vs SiMD classification + IMDRF risk framework
+- **regulatory_pathway**: 510(k) / De Novo / PMA pathway selection
+- **pccp_template**: Predetermined Change Control Plan generator (locked vs adaptive AI)
+- **good_ml_practice**: FDA Good Machine Learning Practice (GMLP) 10 principles
+- **ai_ml_action_plan**: FDA AI/ML Action Plan focus area assessment
+
+Install: `pip install fda-samd-mcp`
+
+By MEOK AI Labs — industry governance MCP. Pairs with meok-attestation-api for signed compliance certs.
