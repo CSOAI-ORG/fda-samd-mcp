@@ -1,0 +1,34 @@
+{
+  "name": "fda-samd-mcp",
+  "title": "Fda Samd Mcp",
+  "description": "FDA AI/ML Software as a Medical Device Action Plan + 510(k) + PMA + De Novo pathways for US MedTech and digital health firms.",
+  "version": "1.0.5",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "classify_sw_device"
+    },
+    {
+      "name": "regulatory_pathway"
+    },
+    {
+      "name": "pccp_template"
+    },
+    {
+      "name": "good_ml_practice"
+    },
+    {
+      "name": "ai_ml_action_plan"
+    },
+    {
+      "name": "search_regulation"
+    },
+    {
+      "name": "list_regulations_in_db"
+    }
+  ]
+}

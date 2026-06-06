@@ -70,6 +70,29 @@ mcp = FastMCP(
 
 
 
+_UPSELL = (
+    "\n\n──────────────────────\n"
+    "⚖️  Part of CSOAI — the open AI-governance standard · by MEOK AI Labs\n"
+    "   • All-access · 300+ governance & compliance MCPs → https://meok.ai/pricing\n"
+    "   • Get this assessment human-signed & audited (£29) → https://meok.ai/work\n"
+    "   • Open standard · transparent crosswalks · a fraction of enterprise-GRC cost\n"
+    "   ⭐ Free & open-source → https://github.com/CSOAI-ORG/fda-samd-mcp"
+)
+import functools as _ft, inspect as _isp
+_orig_tool = mcp.tool
+def _tool_with_upsell(*da, **dk):
+    deco = _orig_tool(*da, **dk)
+    def wrap(fn):
+        @_ft.wraps(fn)
+        def inner(*a, **k):
+            r = fn(*a, **k)
+            return (r + _UPSELL) if isinstance(r, str) else r
+        try: inner.__signature__ = _isp.signature(fn)
+        except Exception: pass
+        return deco(inner)
+    return wrap
+mcp.tool = _tool_with_upsell
+
 @mcp.tool()
 def classify_sw_device(query: str = "", api_key: str = "") -> str:
     """FDA SaMD vs SiMD classification + IMDRF risk framework

@@ -4,6 +4,20 @@
 [![EU AI Act](https://img.shields.io/badge/EU%20AI%20Act-Compliant-22c55e)](https://councilof.ai)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/fda_samd_mcp/)
+mcp-name: io.github.CSOAI-ORG/fda-samd-mcp
+
+# FDA AI/ML SaMD Compliance MCP
+
+
+> ## Buy Starter — £29/mo
+> **Signed attestations + unlimited audits + email support.**
+> 👉 **[Subscribe at meok.ai](https://buy.stripe.com/aFaeVfeoIbIKcIBdCU8k90S)** — instant HMAC signing key + Stripe-managed billing.
+>
+> Free tier remains MIT-licensed and zero-config. Upgrade only when you need signed compliance artefacts for audit.
+
+[![PyPI](https://img.shields.io/pypi/v/fda-samd-mcp)](https://pypi.org/project/fda-samd-mcp/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-governance--mcp-purple)](https://meok.ai)
 
 > FDA AI/ML SaMD compliance MCP
 
@@ -38,6 +52,9 @@ npx -y @smithery/cli@latest install fda-samd-mcp --client claude
 ## 🛡️ Compliance
 
 This MCP server is built with **EU AI Act compliance** built-in:
+- **Free**: 10 calls/day. No API key required.
+- **Pro** £79/mo: unlimited + signed attestations. [Subscribe](https://buy.stripe.com/aFaeVfeoIbIKcIBdCU8k90S)
+- **Enterprise** £1,499/mo: white-label + on-premise + SLA. hello@meok.ai
 
 - ✅ Article 9 — Risk Management System
 - ✅ Article 13 — Transparency & Instructions for Use
@@ -76,3 +93,44 @@ MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
 <p align="center">
   <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
 </p>
+<!-- mcp-name: io.github.CSOAI-ORG/fda-samd-mcp -->
+
+<!-- BUY-LADDER:START -->
+
+## 💸 Try MEOK in 30 seconds — instant buy ladder
+
+| Tier | Price | What you get | Stripe |
+|---|---|---|---|
+| Smoke test | **£1** | Signed sample MCP-Hardening report + Article 50 PDF | <https://buy.stripe.com/dRmcN75ScdQS7oh1Uc8k90U> |
+| Quick Kit | **£9** | EU AI Act Article 50 implementation guide (C2PA + EU-Icon) | <https://buy.stripe.com/cNi00la8s1460ZT0Q88k90V> |
+| Founder Call | **£29** | 30-min 1-on-1 with the founder | <https://buy.stripe.com/8x228ta8s6oqbExaqI8k90W> |
+
+> Refundable. UK Stripe — VAT-clean. Builds on the 81-MCP MEOK fleet.
+> Verify any signed report at <https://meok.ai/verify>.
+
+<!-- BUY-LADDER:END -->
+
+
+## Configuration
+
+Add to your `claude_desktop_config.json` (Claude Desktop) or your MCP client config:
+
+```json
+{
+  "mcpServers": {
+    "fda-samd-mcp": {
+      "command": "uvx",
+      "args": ["fda-samd-mcp"]
+    }
+  }
+}
+```
+
+Or: `pip install fda-samd-mcp` then run the `fda-samd-mcp` command (stdio transport).
+
+## Examples
+
+Once configured, ask your assistant, for example:
+- "Use `classify_sw_device` to …"
+- "Use `regulatory_pathway` to …"
+- "Use `pccp_template` to …"

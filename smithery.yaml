@@ -1,0 +1,33 @@
+name: fda-samd-mcp
+description: 'MCP server: fda-samd-mcp'
+version: 1.0.5
+author: MEOK AI Labs
+homepage: https://safetyof.ai
+repository: https://github.com/MEOK-AI-Labs/fda-samd-mcp
+license: MIT
+categories:
+- compliance
+- governance
+tools:
+- name: classify_sw_device
+  description: FDA SaMD vs SiMD classification + IMDRF risk framework
+- name: regulatory_pathway
+  description: 510(k) / De Novo / PMA pathway selection
+- name: pccp_template
+  description: Predetermined Change Control Plan generator (locked vs adaptive AI)
+- name: good_ml_practice
+  description: FDA Good Machine Learning Practice (GMLP) 10 principles
+- name: ai_ml_action_plan
+  description: FDA AI/ML Action Plan focus area assessment
+- name: search_regulation
+  description: Full-text search across 410+ articles of real EU regulation text (EUR-Lex
+    verified).
+- name: list_regulations_in_db
+  description: List all regulations in the local EUR-Lex FTS5 database.
+build:
+  type: python
+  entrypoint: server.py
+  dependencies:
+  - mcp>=1.0.0
+runtime:
+  python: '>=3.10'
