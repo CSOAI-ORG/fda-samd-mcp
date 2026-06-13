@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "fda-samd-mcp"
 readme = "README.md"
-version = "1.0.8"
+version = "1.0.9"
 description = "FDA AI/ML Software as a Medical Device Action Plan + 510(k) + PMA + De Novo pathways for US MedTech and digital health firms."
 license = {file = "LICENSE"}
 requires-python = ">=3.10"

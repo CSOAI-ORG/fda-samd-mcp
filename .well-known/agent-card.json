@@ -1,0 +1,144 @@
+{
+  "name": "Fda Samd Mcp",
+  "version": "1.0.5",
+  "url": "https://mcp.meok.ai/fda-samd-mcp/a2a",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "protocolVersion": "0.3.0",
+  "description": "FDA AI/ML Software as a Medical Device Action Plan + 510(k) + PMA + De Novo pathways for US MedTech and digital health firms.",
+  "provider": {
+    "organization": "MEOK AI LABS",
+    "url": "https://meok.ai"
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "classify_sw_device",
+      "name": "Classify Sw Device",
+      "description": "Classify Sw Device — a tool of the fda-samd-mcp MCP.",
+      "tags": [
+        "health"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "regulatory_pathway",
+      "name": "Regulatory Pathway",
+      "description": "Regulatory Pathway — a tool of the fda-samd-mcp MCP.",
+      "tags": [
+        "health"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "pccp_template",
+      "name": "Pccp Template",
+      "description": "Pccp Template — a tool of the fda-samd-mcp MCP.",
+      "tags": [
+        "health"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "good_ml_practice",
+      "name": "Good Ml Practice",
+      "description": "Good Ml Practice — a tool of the fda-samd-mcp MCP.",
+      "tags": [
+        "health"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "ai_ml_action_plan",
+      "name": "Ai Ml Action Plan",
+      "description": "Ai Ml Action Plan — a tool of the fda-samd-mcp MCP.",
+      "tags": [
+        "health"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "search_regulation",
+      "name": "Search Regulation",
+      "description": "Search Regulation — a tool of the fda-samd-mcp MCP.",
+      "tags": [
+        "health"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "list_regulations_in_db",
+      "name": "List Regulations In Db",
+      "description": "List Regulations In Db — a tool of the fda-samd-mcp MCP.",
+      "tags": [
+        "health"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    }
+  ],
+  "documentationUrl": "https://meok.ai",
+  "x-meok": {
+    "mcp_name": "fda-samd-mcp",
+    "verifier": "https://proofof.ai/verify",
+    "governed_by": "CSOAI 52-article charter"
+  }
+}
