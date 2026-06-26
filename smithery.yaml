@@ -3,7 +3,7 @@ description: 'MCP server: fda-samd-mcp'
 version: 1.0.5
 author: MEOK AI Labs
 homepage: https://safetyof.ai
-repository: https://github.com/MEOK-AI-Labs/fda-samd-mcp
+repository: https://github.com/CSOAI-ORG/fda-samd-mcp
 license: MIT
 categories:
 - compliance
