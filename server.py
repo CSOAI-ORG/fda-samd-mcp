@@ -46,7 +46,7 @@ def check_access(api_key: str = ""):
 
 FREE_DAILY_LIMIT = 50
 _usage: dict[str, list[datetime]] = defaultdict(list)
-STRIPE_PRO = "https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t"
+STRIPE_PRO = "https://meok.ai/pricing"
 
 
 def _rl(tier="free") -> Optional[str]:
@@ -56,7 +56,7 @@ def _rl(tier="free") -> Optional[str]:
     cutoff = now - timedelta(days=1)
     _usage["anonymous"] = [t for t in _usage["anonymous"] if t > cutoff]
     if len(_usage["anonymous"]) >= FREE_DAILY_LIMIT:
-        return f"Free tier limit ({FREE_DAILY_LIMIT}/day). Pro £79/mo: {STRIPE_PRO}"
+        return f"Free tier limit ({FREE_DAILY_LIMIT}/day). Pro a per-job quote: {STRIPE_PRO}"
     _usage["anonymous"].append(now)
     return None
 
@@ -65,7 +65,7 @@ mcp = FastMCP(
     "FDA AI/ML SaMD Compliance",
     instructions=(
         "By MEOK AI Labs — FDA AI/ML Software as a Medical Device Action Plan + 510(k) + PMA + De Novo pathways for US MedTech and digital health firms. "
-        "Free tier: 10/day. Pro tier (£79/mo): unlimited + signed attestations. "
+        "Free tier: 10/day. Pro tier: unlimited + signed attestations. "
         "Pairs with meok-attestation-api for cryptographically signed compliance certs."
     ),
 )
@@ -140,7 +140,7 @@ def classify_sw_device(query: str = "", api_key: str = "") -> str:
         "regulation_refs": [],
         "next_step": "POST result to https://meok-attestation-api.vercel.app/sign for HMAC-signed compliance cert",
         "tier": tier,
-        "upsell_pro": f"Pro £79/mo: signed attestations + unlimited calls: {STRIPE_PRO}" if tier == "free" else None,
+        "upsell_pro": f"Pro a per-job quote: signed attestations + unlimited calls: {STRIPE_PRO}" if tier == "free" else None,
     }, indent=2)
 
 
@@ -169,7 +169,7 @@ def regulatory_pathway(query: str = "", api_key: str = "") -> str:
         "regulation_refs": [],
         "next_step": "POST result to https://meok-attestation-api.vercel.app/sign for HMAC-signed compliance cert",
         "tier": tier,
-        "upsell_pro": f"Pro £79/mo: signed attestations + unlimited calls: {STRIPE_PRO}" if tier == "free" else None,
+        "upsell_pro": f"Pro a per-job quote: signed attestations + unlimited calls: {STRIPE_PRO}" if tier == "free" else None,
     }, indent=2)
 
 
@@ -198,7 +198,7 @@ def pccp_template(query: str = "", api_key: str = "") -> str:
         "regulation_refs": [],
         "next_step": "POST result to https://meok-attestation-api.vercel.app/sign for HMAC-signed compliance cert",
         "tier": tier,
-        "upsell_pro": f"Pro £79/mo: signed attestations + unlimited calls: {STRIPE_PRO}" if tier == "free" else None,
+        "upsell_pro": f"Pro a per-job quote: signed attestations + unlimited calls: {STRIPE_PRO}" if tier == "free" else None,
     }, indent=2)
 
 
@@ -227,7 +227,7 @@ def good_ml_practice(query: str = "", api_key: str = "") -> str:
         "regulation_refs": [],
         "next_step": "POST result to https://meok-attestation-api.vercel.app/sign for HMAC-signed compliance cert",
         "tier": tier,
-        "upsell_pro": f"Pro £79/mo: signed attestations + unlimited calls: {STRIPE_PRO}" if tier == "free" else None,
+        "upsell_pro": f"Pro a per-job quote: signed attestations + unlimited calls: {STRIPE_PRO}" if tier == "free" else None,
     }, indent=2)
 
 
@@ -256,7 +256,7 @@ def ai_ml_action_plan(query: str = "", api_key: str = "") -> str:
         "regulation_refs": [],
         "next_step": "POST result to https://meok-attestation-api.vercel.app/sign for HMAC-signed compliance cert",
         "tier": tier,
-        "upsell_pro": f"Pro £79/mo: signed attestations + unlimited calls: {STRIPE_PRO}" if tier == "free" else None,
+        "upsell_pro": f"Pro a per-job quote: signed attestations + unlimited calls: {STRIPE_PRO}" if tier == "free" else None,
     }, indent=2)
 
 
@@ -379,10 +379,10 @@ if __name__ == "__main__":
     main()
 
 
-# ── MEOK monetization layer (Stripe upgrade · PAYG · pricing) ──────────
-# Free tier is zero-config. Upgrade to Pro (unlimited) or pay-as-you-go per call.
+# ── MEOK pricing pointer (pay per delivered job; no subscriptions) ──────────
+# No tiers. Jobs are quoted individually at https://meok.ai/pricing.
 import os as _meok_os
-MEOK_STRIPE_UPGRADE = "https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t"  # Pro (unlimited)
+MEOK_STRIPE_UPGRADE = "https://meok.ai/pricing"  # Pro (unlimited)
 MEOK_PAYG_KEY = _meok_os.environ.get("MEOK_PAYG_KEY", "")  # set to enable PAYG (x402 / ~GBP0.05 per call)
 MEOK_PRICING = "https://meok.ai/pricing"
 
